@@ -51,4 +51,5 @@ print(f"Good Afternoon {name}!")
 
 # write a program to fill in a letter templete given below with name and date       
 name = input("Enter your name: ")
-date = input("Enter the date (DD/MM/YYYY): ")   
+date = input("Enter the date (DD/MM/YYYY): ") 
+
