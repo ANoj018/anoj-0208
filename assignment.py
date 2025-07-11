@@ -91,3 +91,31 @@ def word_frequency(sentence):
     return freq
 print(word_frequency("Hello world hello"))
 
+# take a secret word as inout (wihtoutspaces) then encode the word using a custom cipher: replace all vowels with * reverse the string then shift each letter 2 place ahead in the alphabet (wrap around if needed, eg, y-a,z-b) finally print the resulting encoded word
+
+word = input("Enter a secret word (no spaces): ")
+
+vowels = "aeiouAEIOU"
+no_vowels = ""
+for letter in word:
+    if letter in vowels:
+        no_vowels += '*'
+    else:
+        no_vowels += letter
+
+reversed_word = no_vowels[::-1]
+
+encoded = ""
+for letter in reversed_word:
+    if letter.isalpha():
+        if letter.islower():
+            shifted = chr((ord(letter) - ord('a') + 2) % 26 + ord('a'))
+        else:
+            shifted = chr((ord(letter) - ord('A') + 2) % 26 + ord('A'))
+        encoded += shifted
+    else:
+        encoded += letter
+
+print("Encoded word:", encoded)
+
+ 
