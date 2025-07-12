@@ -118,4 +118,79 @@ for letter in reversed_word:
 
 print("Encoded word:", encoded)
 
+# 1. Take a number from the user and print whether it's even or odd.
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+# 2. Write a program to count the number of vowels in a given string.
+text = input("Enter a string: ")
+vowels = "aeiouAEIOU"
+count = 0
+for char in text:
+    if char in vowels:
+        count += 1
+print("Number of vowels:", count)
+
+# 3. Ask the user to input a sentence and print the number of words in it.
+sentence = input("Enter a sentence: ")
+words = sentence.split()
+print("Number of words:", len(words))
+
+# 4. Take a number from the user and print its multiplication table from 1 to 10 using a function.
+def table(n):
+    for i in range(1, 11):
+        print(n, "x", i, "=", n*i)
+
+num = int(input("Enter a number: "))
+table(num)
+
+# 5. Write a program to accept 5 numbers from the user, store them in a list, and print the maximum and minimum values.
+numbers = []
+for i in range(5):
+    n = int(input("Enter number: "))
+    numbers.append(n)
+print("Max:", max(numbers))
+print("Min:", min(numbers))
+
+# 6. Accept a string and check whether it is a palindrome or not (same forward and backward).
+text = input("Enter a string: ")
+if text == text[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+# 7. Create a loop that keeps asking the user to guess a secret number between 1 to 10 until they guess it correctly. (Use while loop and break)
+secret = 7
+while True:
+    guess = int(input("Guess the number (1-10): "))
+    if guess == secret:
+        print("Correct!")
+        break
+
+# 8. Accept 5 numbers from the user and store only the even numbers in a new list. Print the final list.
+even_numbers = []
+for i in range(5):
+    n = int(input("Enter number: "))
+    if n % 2 == 0:
+        even_numbers.append(n)
+print("Even numbers:", even_numbers)
+
+# 9. Write a program that prints the Fibonacci sequence up to n terms. (Ask user for n)
+n = int(input("Enter number of terms: "))
+a, b = 0, 1
+for i in range(n):
+    print(a)
+    a, b = b, a + b
+
+# 10. Accept a list of numbers and remove all duplicate values
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
+unique = []
+for n in nums:
+    if n not in unique:
+        unique.append(n)
+print("Unique list:", unique)
+
  
